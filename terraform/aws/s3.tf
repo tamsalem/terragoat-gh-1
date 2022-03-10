@@ -10,8 +10,10 @@ resource "aws_s3_bucket" "data" {
     Name        = "${local.resource_prefix.value}-data"
     Environment = local.resource_prefix.value
     }, {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
+    git_commit = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_file   = "terraform/aws/s3.tf"
+    }, {
+    yor_trace = "71dd8438-cc87-490f-a738-b1d54c3181ac"
   })
 }
 
@@ -23,8 +25,10 @@ resource "aws_s3_bucket_object" "data_object" {
     Name        = "${local.resource_prefix.value}-customer-master"
     Environment = local.resource_prefix.value
     }, {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
+    git_commit = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_file   = "terraform/aws/s3.tf"
+    }, {
+    yor_trace = "5e2f995b-98aa-4d7b-a8cc-6d9781afb78e"
   })
 }
 
