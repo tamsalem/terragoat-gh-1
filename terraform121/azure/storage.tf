@@ -9,13 +9,13 @@ resource "azurerm_managed_disk" "example" {
     enabled = false
   }
   tags = {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/azure/storage.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
+    git_commit           = "45609ea68b4439bf7793e38ed1c08b084ec93b8c"
+    git_file             = "terraform121/azure/storage.tf"
+    git_last_modified_at = "2022-04-19 15:25:35"
+    git_last_modified_by = "tamsalem@paloaltonetworks.com"
+    git_modifiers        = "tamsalem"
+    git_org              = "tamsalem"
+    git_repo             = "terragoat-gh-1"
     yor_trace            = "d17da7b3-f1c5-4723-9f77-d1b9069459c7"
   }
 }
@@ -48,13 +48,13 @@ resource "azurerm_storage_account" "example" {
     }
   }
   tags = {
-    git_commit           = "5c6b5d60a8aa63a5d37e60f15185d13a967f0542"
-    git_file             = "terraform/azure/storage.tf"
-    git_last_modified_at = "2021-05-02 10:06:10"
-    git_last_modified_by = "nimrodkor@users.noreply.github.com"
-    git_modifiers        = "Adin.Ermie/nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
+    git_commit           = "45609ea68b4439bf7793e38ed1c08b084ec93b8c"
+    git_file             = "terraform121/azure/storage.tf"
+    git_last_modified_at = "2022-04-19 15:25:35"
+    git_last_modified_by = "tamsalem@paloaltonetworks.com"
+    git_modifiers        = "tamsalem"
+    git_org              = "tamsalem"
+    git_repo             = "terragoat-gh-1"
     yor_trace            = "23861ff4-c42d-495e-80ac-776c74035f43"
   }
 }
