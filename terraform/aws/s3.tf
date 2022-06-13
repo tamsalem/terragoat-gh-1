@@ -4,7 +4,6 @@ resource "aws_s3_bucket" "data" {
   # bucket does not have access logs
   # bucket does not have versioning
   bucket        = "${local.resource_prefix.value}-data"
-  acl           = "public-read"
   force_destroy = true
   tags = merge({
     Name        = "${local.resource_prefix.value}-data"
@@ -15,6 +14,16 @@ resource "aws_s3_bucket" "data" {
     }, {
     yor_trace = "116ba5c8-7ecd-432b-803c-f761046342d4"
   })
+  server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        sse_algorithm = "aws:kms"
+      }
+    }
+  }
+  versioning {
+    enabled = true
+  }
 }
 
 resource "aws_s3_bucket_object" "data_object" {
@@ -101,6 +110,13 @@ resource "aws_s3_bucket" "data_science" {
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
     yor_trace            = "9a7c8788-5655-4708-bbc3-64ead9847f64"
+  }
+  server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        sse_algorithm = "aws:kms"
+      }
+    }
   }
 }
 
